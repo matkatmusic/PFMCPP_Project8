@@ -44,6 +44,11 @@ your task:
 #include <vector>
 #include <algorithm>
 #include <cassert>
+#include "Highway.h"
+#include "Car.h"
+#include "Motorcycle.h"
+#include "SemiTruck.h"
+#include "HighwayPatrol.h"
 
 int main()
 {
@@ -63,7 +68,7 @@ int main()
 
     };
 
-    assert(false);
+    //assert(false);
     //add the cars, motorcycles and trucks to the highway using range-based for() loops: for( element : vec ) { ... }
     //be careful to not accidentally make element copies when iterating.
     
@@ -74,3 +79,5 @@ int main()
 
     return 0;
 }
+
+

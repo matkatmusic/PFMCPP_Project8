@@ -2,7 +2,7 @@
 
 Motorcycle::Motorcycle(const std::string& n) : Vehicle(n) {}
 
-void Motorcycle::lanesplitAndRace( int topSpeed )
+void Motorcycle::lanesplitAndRace(int topSpeed)
 {
     setSpeed(topSpeed);
     std::cout << name << (topSpeed > 90 ? ": yeeehawwww" : ": zzzzzzzz") << std::endl;
@@ -15,7 +15,7 @@ void Motorcycle::tryToEvade()
 
 void Motorcycle::setSpeed(int s)
 {
-    if( s < 90 )
+    if(s < 90)
     {
         //ignore the request to lower the speed
         std::cout<< name << ": uh, no.  i'm currently lane-splitting and racing" << std::endl;
@@ -25,3 +25,4 @@ void Motorcycle::setSpeed(int s)
         Vehicle::setSpeed(s);
     }
 }
+
