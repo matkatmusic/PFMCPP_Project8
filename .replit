@@ -1,2 +1,2 @@
 language = "cpp"
-run = "clang++ -std=c++17 -Weverything -Wno-c++98-compat -Wno-missing-prototypes -Wno-non-virtual-dtor -Wno-padded -Wno-weak-vtables -Wno-delete-non-virtual-dtor -Wno-unused-parameter -Wno-missing-noreturn -Wno-sign-conversion -Wno-shorten-64-to-32 main.cpp Car.cpp Highway.cpp HighwayPatrol.cpp Motorcycle.cpp && ./a.out"
+run = "clang++ -std=c++17 -Weverything -Wno-c++98-compat -Wno-missing-prototypes -Wno-non-virtual-dtor -Wno-padded -Wno-weak-vtables -Wno-delete-non-virtual-dtor -Wno-unused-parameter -Wno-missing-noreturn -Wno-sign-conversion -Wno-shorten-64-to-32 main.cpp Car.cpp Highway.cpp HighwayPatrol.cpp Motorcycle.cpp SemiTruck.cpp && ./a.out"

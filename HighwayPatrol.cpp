@@ -1,4 +1,8 @@
 #include "HighwayPatrol.h"
+#include "Car.h"
+#include "HighwayPatrol.h"
+#include "Motorcycle.h"
+#include "SemiTruck.h"
 #include <iostream>
 
 HighwayPatrol::HighwayPatrol() : Vehicle("HighwayPatrol")
@@ -23,12 +27,20 @@ void HighwayPatrol::scanHighway(Highway* h)
 
 void HighwayPatrol::pullOver(Vehicle* v, bool willArrest, Highway* h)
 {
+
+    // I can't figure out why this casting of 'v' isn't working...
+    std::string vehicleType;
+    if(dynamic_cast<Car*>(v)) { vehicleType = "car"; }
+    else if(dynamic_cast<Motorcycle*>(v)) { vehicleType = "motorcycle"; }
+    else if(dynamic_cast<SemiTruck*>(v)) { vehicleType = "semi truck"; }
+    else { vehicleType = "error";  }
+
     std::cout << "\n\n";
     std::cout << name << ": vehicle is traveling " << v->speed - h->speedLimit << " miles per hour over the speed limit" << std::endl;
-    if( willArrest )
+    if(willArrest)
     {
         //print the vehicle type in this std::cout between "THE [" and "] PULL". 
-        std::cout << name << ": YOU IN THE [ " << " ] PULL OVER AND SHOW YOUR HANDS" << std::endl;
+        std::cout << name << ": YOU IN THE " << vehicleType << " PULL OVER AND SHOW YOUR HANDS" << std::endl;
         std::cout << "EVERYONE ELSE, SLOW DOWN!! \n\n\n";
         h->removeVehicle(v);
     }

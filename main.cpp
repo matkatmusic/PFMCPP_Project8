@@ -56,21 +56,25 @@ int main()
     
     std::vector<Car> cars 
     { 
-        Car("janice"),
+        Car("janice"), Car("john"), Car("alice")
     };
     std::vector<Motorcycle> motorcycles
     { 
-
+        Motorcycle("tim"), Motorcycle("jim"), Motorcycle("alejandra")
     };
 
     std::vector<SemiTruck> trucks
     {
-
+        SemiTruck("bubba"), SemiTruck("peggy")
     };
 
     //assert(false);
     //add the cars, motorcycles and trucks to the highway using range-based for() loops: for( element : vec ) { ... }
     //be careful to not accidentally make element copies when iterating.
+
+    for(Car car : cars) { highway.addVehicle(&car); }
+    for(Motorcycle motorcycle : motorcycles) { highway.addVehicle(&motorcycle); }
+    for(SemiTruck truck : trucks) { highway.addVehicle(&truck); }
     
     HighwayPatrol cop;
     cop.scanHighway(&highway);
