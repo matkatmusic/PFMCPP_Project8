@@ -14,9 +14,13 @@ void HighwayPatrol::scanHighway(Highway* h)
 {
     std::cout << name << ": scanning highway for speeders" << std::endl;
 
-    for( int i = h->vehicles.size(); --i >= 0; )
+    // Is it worth casting to silence warnings like these? 
+
+    // Explicitly casting h->vehicles.size() in order to silence the [-Wshorten-64-to-32] warning
+    for(int i = static_cast<int>(h->vehicles.size()); --i >= 0;)
     {
-        auto* v = h->vehicles[i];
+        // Explicitly casting i in order to silence the [-Wsign-conversion] warning
+        auto* v = h->vehicles[static_cast<unsigned long int>(i)];
         if( v->speed > h->speedLimit + 5 )
         {
             pullOver(v, v->speed > (h->speedLimit + 15), h );
@@ -27,7 +31,6 @@ void HighwayPatrol::scanHighway(Highway* h)
 
 void HighwayPatrol::pullOver(Vehicle* v, bool willArrest, Highway* h)
 {
-
     // I can't figure out why this casting of 'v' isn't working...
     std::string vehicleType;
     if(dynamic_cast<Car*>(v)) { vehicleType = "car"; }
