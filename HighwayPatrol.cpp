@@ -49,4 +49,13 @@ void HighwayPatrol::pullOver(Vehicle* v, bool willArrest, Highway* h)
     }
 }
 
+void HighwayPatrol::tryToEvade() {}
+
+void HighwayPatrol::setSpeed(int s) 
+{
+    std::cout << "\nHighway is adjusting " << name << "'s speed to " << s << " mph" << std::endl;
+    speed = s;
+}   
+
+
 
