@@ -8,8 +8,8 @@ struct HighwayPatrol : public Vehicle
     HighwayPatrol();
     
     //virtual ~HighwayPatrol() = default;
-    HighwayPatrol(const HighwayPatrol&) = default;
-    HighwayPatrol& operator = (const HighwayPatrol&) = default;
+    HighwayPatrol(const HighwayPatrol&);
+    HighwayPatrol& operator = (const HighwayPatrol&);
 
     void scanHighway(Highway* h);
 

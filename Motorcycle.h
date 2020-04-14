@@ -8,8 +8,9 @@ struct Motorcycle : public Vehicle
 {
     Motorcycle(const std::string& n);
 
-    Motorcycle(const Motorcycle&) = default;
-    Motorcycle& operator = (const Motorcycle&) = default;
+    //virtual ~Motorcycle();
+    Motorcycle(const Motorcycle&);
+    Motorcycle& operator = (const Motorcycle&);
     
     void lanesplitAndRace(int topSpeed = std::numeric_limits<int>::max());
     

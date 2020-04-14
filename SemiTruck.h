@@ -6,12 +6,9 @@ struct SemiTruck : public Vehicle
 {
     SemiTruck(const std::string& n);
 
-    SemiTruck(const SemiTruck&) = default;
-    SemiTruck& operator = (const SemiTruck&) = default;
+    virtual ~SemiTruck();
+    SemiTruck(const SemiTruck&);
+    SemiTruck& operator = (const SemiTruck&);
 
     void pullOver();
-
-    void tryToEvade() override;
-
-    void setSpeed(int s) override;
 };

@@ -7,9 +7,9 @@ struct Vehicle
 {
     Vehicle(const std::string& n);
     
-    virtual ~Vehicle() = default;
-    Vehicle(const Vehicle&) = default;
-    Vehicle& operator = (const Vehicle&) = default;
+    virtual ~Vehicle(); // FIXME these are implementations.  move them to the CPP file
+    Vehicle(const Vehicle&);
+    Vehicle& operator = (const Vehicle&);
     
     virtual void setSpeed(int s);
     virtual void tryToEvade();
