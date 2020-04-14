@@ -122,9 +122,9 @@ int main()
     trucks.emplace_back("nancy");
 
     
-    for(Car car : cars) { highway.addVehicle(&car); }
-    for(Motorcycle motorcycle : motorcycles) { highway.addVehicle(&motorcycle); }
-    for(SemiTruck truck : trucks) { highway.addVehicle(&truck); }
+    for(Car &car : cars) { highway.addVehicle(&car); }
+    for(Motorcycle &motorcycle : motorcycles) { highway.addVehicle(&motorcycle); }
+    for(SemiTruck &truck : trucks) { highway.addVehicle(&truck); }
     
     HighwayPatrol cop;
     cop.scanHighway(&highway);
