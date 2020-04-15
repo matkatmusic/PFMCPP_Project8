@@ -1,4 +1,7 @@
 #include "HighwayPatrol.h"
+#include "Car.h"
+#include "Motorcycle.h"
+#include "SemiTruck.h"
 
 #include <iostream>
 

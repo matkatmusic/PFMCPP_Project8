@@ -3,11 +3,7 @@
 #include <vector>
 #include <algorithm>
 
-#include "Car.h"
-#include "Motorcycle.h"
-#include "SemiTruck.h"
-#include "Vehicle.h"
-
+struct Vehicle;
 struct HighwayPatrol;
 
 struct Highway
