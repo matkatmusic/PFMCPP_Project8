@@ -2,21 +2,21 @@
 
 #include "Vehicle.h"
 #include "Highway.h"
+#include "Car.h"
+#include "HighwayPatrol.h"
+#include "Motorcycle.h"
+#include "SemiTruck.h"
 
-struct HighwayPatrol : public Vehicle 
+struct HighwayPatrol : Vehicle 
 {
     HighwayPatrol();
     
-    //virtual ~HighwayPatrol() = default;
+    ~HighwayPatrol() override;
     HighwayPatrol(const HighwayPatrol&);
     HighwayPatrol& operator = (const HighwayPatrol&);
 
     void scanHighway(Highway* h);
 
     void pullOver(Vehicle* v, bool willArrest, Highway* h);
-
-    void tryToEvade() override;
-
-    void setSpeed(int s) override;
 };
 

@@ -4,7 +4,6 @@ Vehicle::Vehicle(const std::string& n) : name(n) { }
 
 Vehicle::~Vehicle() = default;
 Vehicle::Vehicle(const Vehicle&) = default;
-
 Vehicle& Vehicle::operator = (const Vehicle&) = default;
 
 void Vehicle::setSpeed(int s)  

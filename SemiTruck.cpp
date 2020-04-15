@@ -11,3 +11,10 @@ void SemiTruck::pullOver()
     std::cout << name << ": pulling over!" << std::endl;
     setSpeed(0);
 }
+
+void SemiTruck::driveSlowlyInLeftLane() 
+{
+    std::cout << name << ": driving slowly in the left lane." << std::endl;
+    setSpeed(30);
+}
+

@@ -6,9 +6,11 @@ struct SemiTruck : public Vehicle
 {
     SemiTruck(const std::string& n);
 
-    virtual ~SemiTruck();
+    ~SemiTruck() override;
     SemiTruck(const SemiTruck&);
     SemiTruck& operator = (const SemiTruck&);
 
     void pullOver();
+
+    void driveSlowlyInLeftLane();
 };

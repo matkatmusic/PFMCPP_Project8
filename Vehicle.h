@@ -3,18 +3,21 @@
 #include <string>
 #include <iostream>
 
+struct HighwayPatrol;
+
 struct Vehicle
 {
     Vehicle(const std::string& n);
     
-    virtual ~Vehicle(); // FIXME these are implementations.  move them to the CPP file
+    virtual ~Vehicle();
     Vehicle(const Vehicle&);
     Vehicle& operator = (const Vehicle&);
     
     virtual void setSpeed(int s);
     virtual void tryToEvade();
 
-    int speed = 0;
 protected:
+    int speed = 0;
     std::string name;
+    friend HighwayPatrol;
 };
