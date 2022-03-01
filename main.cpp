@@ -30,7 +30,9 @@ your task:
 
     5) Add a Truck type
         semi-trucks don't evade when they're pulled over, unlike cars and motorcycles.  
-        They'll also need a member function that can be called when they are added to the highway.  Look at the Highway member functions for more hints on this.
+        write a member function called 'pullOver' that can be called for this requirement.
+        They'll also need a separate member function that can be called when they are added to the highway.  
+        Look at the Highway member functions for more hints on this.
 
     6) Add some Cars to the Highway
     7) Add some Motorcycles to the Highway
@@ -44,6 +46,9 @@ your task:
 
     11) Remember the rules about 'Don't include what you don't use'
         check each source file for things being included that aren't used.
+
+    The Highway Patrol should try to pull over every Motorcycle instance you declare in the vector.
+    If you see no output after scanning the highway, your program doesn't work as expected and you'll need to figure out why Motorcycles are not triggering the Highway Patrol class when it scans the highway.
  */
 
 #include <iostream>

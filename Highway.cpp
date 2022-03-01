@@ -17,6 +17,7 @@ void Highway::addVehicleInternal(Vehicle* v)
 
     /*
     depending on the derived type, call the member function that doesn't evade the cops. 
+    do not call `setSpeed`.  Pick a different function.
     */
 }
 
@@ -26,7 +27,7 @@ void Highway::removeVehicleInternal(Vehicle* v)
 
     /*
     depending on the derived type, call the member function that tries to evade the cops. 
-
+    do not call `setSpeed`.  Pick a different function.
     trucks pull over, but cars and bikes try to evade!!
     */
 }
